@@ -27,6 +27,7 @@ response = openai.Completion.create(
 print(response.choices[0].text)
 
 sentiments = []
+quality = []
 file1 = open("output.txt")
 for line in file1.readlines():
     currentLine = (line.strip().split("Sentiment: "))
@@ -38,6 +39,16 @@ for line in file1.readlines():
                 sentiments.append(sentimentVal)
         except ValueError:
             pass
-        
+    currentLine1 = (line.strip().split("Quality of Care: "))
+    QualityVal = 0
+    for i in currentLine:
+        try:
+            QualityVal = float(i)
+            if(QualityVal > 0):
+                quality.append(QualityVal)
+        except ValueError:
+            pass
+          
 print(sentiments)
+print(quality)
 file1.close()
