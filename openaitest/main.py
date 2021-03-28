@@ -24,20 +24,20 @@ with open('data.txt', 'r') as file:
 # print(response.choices[0].text.strip())
 
 # Parse sentiments from file
-sentiments = []
-file1 = open("output.txt")
+ratings = []
+file1 = open("reviews.txt")
 for line in file1.readlines():
-    currentLine = (line.strip().split("Sentiment: "))
-    sentimentVal = 0
+    currentLine = (line.strip().split("Rating: "))
+    Rating = 0
     for i in currentLine:
         try:
-            sentimentVal = float(i)
-            if(sentimentVal > 0):
-                sentiments.append(sentimentVal)
+            Rating = float(i)
+            if(Rating > 0):
+                ratings.append(Rating)
         except ValueError:
             pass
 file1.close()
-print(len(sentiments))
+print(ratings)
 
 # Parse reviews from file
 reviews = []
