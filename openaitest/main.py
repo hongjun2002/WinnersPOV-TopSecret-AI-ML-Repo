@@ -10,18 +10,25 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 with open('data.txt', 'r') as file:
   data = file.read().replace('\n', '')
 
-# response = openai.Completion.create(
-#   engine="davinci",
-#   prompt=data,
-#   temperature=0.9,
-#   max_tokens=150,
-#   top_p=1,
-#   frequency_penalty=0.0,
-#   presence_penalty=0.6,
-#   stop=["\n", " Human:", " AI:"]
-# )
-#
+  
 # print(response.choices[0].text.strip())
+
+#f = open("output.txt", "r")
+#data = "Summarize what needs to be improved in the hospital based on the reviews below(ignore sentiment and quality of care):\n"
+#data += f.read()
+#data += "\nsummary:\n In general, the hospital should \n"
+
+#response = openai.Completion.create(
+# engine = "davinci-instruct-beta",
+#prompt = data,
+# temperature = 0.7,
+# max_tokens = 64,
+# top_p = 1,
+# frequency_penalty = 0,
+# presence_penalty = 0
+#)
+
+
 
 # Parse sentiments from file
 sentiments = []
