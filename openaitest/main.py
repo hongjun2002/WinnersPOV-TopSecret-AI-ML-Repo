@@ -3,7 +3,7 @@
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = "keey"
+os.environ["OPENAI_API_KEY"] = "keey" #change this to your key
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 f = open("input.txt", "r") #input file
