@@ -30,7 +30,7 @@ for line in file1.readlines():
 
 file1.close()
 
-#f = open("/Users/hongjunhe/PycharmProjects/pythonProject/venv/test1.txt", "r")
+#f = open("test1.txt", "r")
 #data = "Summarize what needs to be improved in the hospital based on the reviews below(ignore sentiment and quality of care):\n"
 #data += f.read()
 #data += "\nsummary:\n In general, the hospital should \n"
